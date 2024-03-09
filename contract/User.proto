@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package User;
+import "google/protobuf/empty.proto";
+
+service UserService {
+  rpc GetUsers (google.protobuf.Empty) returns (UsersResponse) {}
+  rpc GetUser (GetUserRequest) returns (UserResponse) {}
+  rpc CreateUser(User) returns (UserResponse) {}
+}
+
+message User {
+  string userId = 1;
+  string username = 2;
+}
+
+message UsersResponse {
+          repeated User data = 1;
+          string message = 2;
+          string status = 3;
+}
+
+message UserResponse {
+          User data = 1;
+          string message = 2;
+          string status = 3;
+}
+
+message GetUserRequest {
+          string userId = 1;
+}

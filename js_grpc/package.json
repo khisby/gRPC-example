@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "scripts": {
+    "start": "ts-node index.ts"
+  }
+}
